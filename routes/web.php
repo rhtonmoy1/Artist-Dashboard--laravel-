@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -27,4 +28,19 @@ Route::get('/product', function () {
 
 Route::get('/account', function () {
     return view('account');
+});
+
+// Prefix
+Route::prefix('users')->group(function(){
+
+    Route::get('/', [UserController::class,'index'])->name('users.index');
+
+    Route::get('/{id}',[UserController::class, 'show'] )->name('users.show');
+});
+
+
+
+
+Route::fallback(function(){
+    dd("apner request puron kora somvob na");
 });
