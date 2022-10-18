@@ -39,16 +39,16 @@
 <body class="g-sidenav-show  bg-gray-200">
 
 <!-- Sidebar Start-->
-        <x-partials.sidebar/>
+        <x-admin-partials.sidebar/>
   <!-- Sidebar END -->
   <main class="main-content position-relative max-height-vh-100 h-100 border-radius-lg ">
     <!-- Navbar Start -->
-        <x-partials.header/>
+        <x-admin-partials.header/>
     <!-- Navbar End-->
     <div class="container-fluid py-4">
         {{ $slot }}
      <!-- Footer Start -->
-        <x-partials.footer/>
+        <x-admin-partials.footer/>
      <!-- Footer End -->
     </div>
   </main>
